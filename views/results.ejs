@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="app.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-	50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	</head>
+	<body>
+		<h1 id="top" class="ref-title">The references to your search</h1>
+		<hr>
+		<div class="container-res">
+			<ul class="res-list">
+				<% parsedata.Search.forEach(function(movie){ %>
+					<% if(typeof movie !== 'undefined'){ %>
+						<% console.log(movie); %>
+						<li>
+							<div>
+								<strong><%= movie.Title %></strong>
+							</div>
+							<div>
+								<%= movie.Year %>
+							</div>
+							<div>Type:
+								<%= movie.Type %>
+							</div>
+							<div>
+								<a href=<%= movie.Poster %>><img src=<%= movie.Poster %> alt="No Image"></a>
+							</div>
+						</li>
+						
+					<% }%>
+				<% }); %> 
+			</ul>
+		</div>
+		<div class="srch-and-arrow">
+			<a href="#top" class="go-to-top">Back To Top <i class="fas fa-arrow-up"></i></a>
+			<a href="/" class="srch-again-btn">Search Again</a>
+		</div>
+	</body>
+</html>
+
+
+
+
