@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var request = require('request');
 
+const port = 3000
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
@@ -20,7 +22,7 @@ app.get("/results", function(req, res, next){
 			if(parsedata.Response.toLowerCase() !== 'false'){
 				res.render("results", {parsedata:parsedata});
 			}else{
-				res.send("Couldn't find the movie, please be more specific");
+				res.send("Couldn't find the movie, please try again!");
 			}
 		}
 	});
@@ -30,6 +32,6 @@ app.get("*", function(req,res){
 	res.send('Movie Not Found');
 });
 
-app.listen(3000, function(){
-	console.log('server running');
+app.listen(port, function(){
+	console.log('server running on: ', port);
 });
