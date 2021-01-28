@@ -79,17 +79,15 @@ hr {
 	margin: 50px auto;
 }
 .srch-again-btn {
-	text-decoration: none;
-	margin-bottom: 100px;
-    float: right;
+	text-align: center;
     font-size: 26px;
-	color: #146EB4;
     padding: 10px 18px;
     border-radius: 6px;
 	clear: both;
 }
-.srch-again-btn:hover {
-	font-size: 28px;
+.srch-again-btn a {
+	color: #146EB4;
+	text-decoration: none;
 }
 .go-to-top {
 	color: #146EB4;
