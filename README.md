@@ -1,11 +1,14 @@
-A simple movie search
+## Movie Search
+
+A simple movie search using omdb api http://www.omdbapi.com/
 
 # Quick start
 
-install Node.js
+npm install
 
 # Usage
 
-run ```node app.js```
+```
+node app.js
+```
 
-using omdb api http://www.omdbapi.com/
